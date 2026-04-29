@@ -1,0 +1,159 @@
+
+
+    <!-- <table border="1",rowsspan ="2",colsspan="2">
+        <tr>
+        <th>
+            
+            <td>Name</td>
+            <td>Class</td>
+            <td> Fee Due</td>
+            <td>Fee Details</td>
+            <td>Total Fee</td>
+        </th>
+        </tr>
+        <tr>
+        <td>1</td>
+        <td>Vishnupriya</td>
+        <td>10th</td>
+        <td>Rs. 5000</td>
+        <td>Rs. 1000</td>
+        <td>Rs. 6000</td>
+        </tr>
+        
+        <tr>
+        <td>2</td>
+        <td>Manoj</td>
+        <td>12th</td>
+        <td>Rs. 7000</td>
+        <td>Rs. 2000</td>
+        <td>Rs. 9000</td>
+        </tr>
+
+        <tr>
+        <td>3</td>
+        <td>Pranav</td>
+        <td>9th</td>
+        <td>Rs. 4000</td>
+        <td>Rs. 500</td>
+        <td>Rs. 4500</td>
+        <tr></tr>
+    </table>
+</body>
+</html> -->
+
+
+<!-- <h3>Ordered List</h3>
+<ol>
+<li>Apple</li>
+<li>Banana</li>
+</ol>
+
+<h3>Unordered List</h3>
+<ul>
+<li>Car</li>
+<li>Bike</li>
+</ul>
+
+<h3>Description List</h3>
+<dl>
+<dt>HTML</dt>
+<dd>Hyper Text Markup Language</dd>
+</dl>
+
+</body>
+</html> -->
+
+<!-- <body>
+
+<h2>Registration Form</h2>
+
+<form>
+<label for="name">Name:</label> <input id="name" type="text" placeholder="Enter your name"><br><br>
+<label for="password">Password:</label> <input id="password" type="password" placeholder="Enter your password"><br><br>
+
+Gender:
+<label><input type="radio" name="g">Male</label>
+<label><input type="radio" name="g">Female</label><br><br>
+
+Hobbies:
+<label><input type="checkbox">Reading</label>
+<label><input type="checkbox">Sports</label><br><br>
+
+<input type="submit" value="Submit">
+</form>
+
+</body>
+</html> -->
+
+
+
+
+<!-- <body>
+
+< Inline CSS -->
+<!-- <h1 style="background-color:pink"> Welcome to my channel</h1>
+<p>This is a paragraph with inline CSS styling.</p>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Page</title>
+    
+</head>
+<body>
+<script>
+let a = 10;
+let b = 5;
+
+document.write("Addition: " + (a + b) + "<br>");
+document.write("Comparison (a>b): " + (a > b));
+</script>
+
+</body>
+</html>
+<body>
+    
+       <script>
+    
+        let price = 100;
+        let taxRate = 0.18; 
+        let total = price + (price * taxRate); // Addition and Multiplication
+
+        // --- 2. Comparison & Logical Operators ---
+        let userAge = 20;
+        let hasTicket = true;
+        // Logical AND (&&) requires both to be true
+        let canEnter = (userAge >= 18) && hasTicket; 
+
+        // --- 3. Ternary Operator (Shorthand If) ---
+        let welcomeMessage = canEnter ? "Welcome to the show!" : "Access Denied.";
+
+        // --- 4. Nullish Coalescing (??) ---
+        let username = null;
+        let displayName = username ?? "Guest User"; // Falls back to "Guest" if null
+
+        // --- Displaying results in the HTML ---
+        const outputDiv = document.getElementById('output');
+        
+        outputDiv.innerHTML = `
+            <h2>Calculations</h2>
+            <div class="result">Price + 18% Tax: $${total}</div>
+            
+            <h2>Logic & Comparisons</h2>
+            <div class="result">Can Enter? ${canEnter}</div>
+            <div class="result">Message: ${welcomeMessage}</div>
+            
+            <h2>Null Safety</h2>
+            <div class="result">User: ${displayName}</div>
+        `;
+
+        // Logging to console for debugging
+        console.log("Operator logic completed successfully.");
+    </script>
+   
+</body>
