@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+</head>
+<body>
+    <!-- <script src="check.js"></script> -->
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background: #0f0f1a;
+      font-family: sans-serif;
+    }
+
+    .calculator {
+      background: #1a1a2e;
+      border-radius: 24px;
+      padding: 24px;
+      width: 320px;
+    }
+
+    .screen {
+      background: #0f0f1a;
+      border-radius: 14px;
+      padding: 16px 20px;
+      margin-bottom: 20px;
+      text-align: right;
+      min-height: 80px;
+    }
+
+    .screen .expr {
+      font-size: 13px;
+      color: #6c6c8a;
+      min-height: 18px;
+    }
+
+    .screen .result {
+      font-size: 36px;
+      color: #e0e0ff;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .btn {
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 12px;
+      height: 60px;
+      cursor: pointer;
+    }
+
+    .btn-num  { background: #2a2a4a; color: #c8c8f0; }
+    .btn-op   { background: #3d2a6e; color: #b39dff; }
+    .btn-eq   { background: #5c3bcc; color: #fff; grid-column: span 2; }
+    .btn-ac   { background: #6e2a4a; color: #ff9ab2; }
+    .btn-del  { background: #2a3d6e; color: #9ab2ff; }
+    .btn-zero { grid-column: span 2; }
+  </style>
+</head>
+<body>
+
+<div class="calculator">
+  <div class="screen">
+    <div class="expr" id="expr"></div>
+    <div class="result" id="display">0</div>
+  </div>
+  <div class="buttons">
+    <button class="btn btn-ac"  onclick="clearAll()">AC</button>
+    <button class="btn btn-del" onclick="deleteLast()">⌫</button>
+    <button class="btn btn-op"  onclick="inputOp('%')">%</button>
+    <button class="btn btn-op"  onclick="inputOp('/')">÷</button>
+
+    <button class="btn btn-num" onclick="inputNum('7')">7</button>
+    <button class="btn btn-num" onclick="inputNum('8')">8</button>
+    <button class="btn btn-num" onclick="inputNum('9')">9</button>
+    <button class="btn btn-op"  onclick="inputOp('*')">×</button>
+
+    <button class="btn btn-num" onclick="inputNum('4')">4</button>
+    <button class="btn btn-num" onclick="inputNum('5')">5</button>
+    <button class="btn btn-num" onclick="inputNum('6')">6</button>
+    <button class="btn btn-op"  onclick="inputOp('-')">−</button>
+
+    <button class="btn btn-num" onclick="inputNum('1')">1</button>
+    <button class="btn btn-num" onclick="inputNum('2')">2</button>
+    <button class="btn btn-num" onclick="inputNum('3')">3</button>
+    <button class="btn btn-op"  onclick="inputOp('+')">+</button>
+
+    <button class="btn btn-num btn-zero" onclick="inputNum('0')">0</button>
+    <button class="btn btn-num" onclick="inputDot()">.</button>
+    <button class="btn btn-eq"  onclick="calculate()">=</button>
+  </div>
+</div>
+
+<script>
+  let current = '';
+  let expression = '';
+  let justCalc = false;
+
+  function updateDisplay(val) {
+    document.getElementById('display').textContent = val || '0';
+  }
+
+  function updateExpr(val) {
+    document.getElementById('expr').textContent = val;
+  }
+
+  function inputNum(n) {
+    if (justCalc) { current = ''; expression = ''; justCalc = false; }
+    current += n;
+    expression += n;
+    updateDisplay(current);
+    updateExpr(expression);
+  }
+
+  function inputOp(op) {
+    justCalc = false;
+    current = '';
+    expression += ' ' + op + ' ';
+    updateExpr(expression);
+    updateDisplay('0');
+  }
+
+  function inputDot() {
+    if (current.includes('.')) return;
+    if (!current) { current = '0'; expression += '0'; }
+    current += '.';
+    expression += '.';
+    updateDisplay(current);
+    updateExpr(expression);
+  }
+
+  function deleteLast() {
+    if (justCalc) return;
+    expression = expression.slice(0, -1);
+    current = current.slice(0, -1);
+    updateDisplay(current || '0');
+    updateExpr(expression);
+  }
+
+  function clearAll() {
+    current = ''; expression = ''; justCalc = false;
+    updateDisplay('0');
+    updateExpr('');
+  }
+
+  function calculate() {
+    if (!expression) return;
+    try {
+      let result = Function('"use strict"; return (' + expression + ')')();
+      result = parseFloat(result.toFixed(10));
+      updateExpr(expression + ' =');
+      updateDisplay(result);
+      current = String(result);
+      expression = String(result);
+      justCalc = true;
+    } catch(e) {
+      updateDisplay('Error');
+      current = ''; expression = ''; justCalc = true;
+    }
+  }
+</script>
+
+</body>
+</html>
+
+    </div>
+</body>
+</html>
