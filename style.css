@@ -1,0 +1,365 @@
+#front {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* pushes left content and right content apart */
+  background-color: #6c6cd1;
+  padding: 10px 40px; /* top-bottom: 10px, left-right: 40px */
+  flex-wrap: wrap;
+}
+
+/* Left side - phone and email */
+#front .left-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: rgb(248, 252, 253);
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Right side - navigation links */
+#front .right-links {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* space between each link */
+}
+
+#front .right-links a {
+  color: rgb(241, 244, 245);
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 5px 12px;
+}
+
+#front .right-links a:hover {
+  color: rgb(118, 133, 221);
+  background-color: rgba(147, 192, 207, 0.2);
+  border-radius: 4px;
+}
+/* Main container */
+#front-sodhi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px 40px;
+  background-color: #f9f9f9;
+}
+
+/* College Name - H1 */
+#front-sodhi h1 {
+  font-size: 5vh;
+  color: royalblue;
+  text-align: center;
+  margin: 0;
+  line-height: 1;
+  font-weight: bold;
+}
+
+/* Degree & PG span under h1 */
+#front-sodhi span {
+  font-size: 1.5rem;
+  color: royalblue;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+/* Paragraph - italic, creamish brown */
+#front-sodhi p {
+  font-style: italic;
+  color: #c8a97e;          /* light creamish brown */
+  font-size: 0.7rem;
+  margin-top: 15px;
+  max-width: 700px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* Images inside front-sodhi */
+#front-sodhi img {
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  object-fit: contain;
+}
+
+/* Marquee */
+marquee {
+  background-color: orange;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif; /* sans-serif */
+  padding: 12px 0;
+  letter-spacing: 1px;
+}
+/* Wrapper: nav on left, image on right */
+#page-body {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0;
+}
+
+/* Left side nav */
+#left-side {
+  width: 220px;
+  min-height: 100vh;
+  background-color: #1a237e;   /* dark royal blue */
+  padding: 10px 0;
+  flex-shrink: 0;
+  overflow-y: auto;
+}
+
+/* Each nav item */
+#left-side h3 {
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 14px 20px;
+  margin: 0;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background 0.2s, padding-left 0.2s;
+}
+
+/* Hover effect */
+#left-side h3:hover {
+  background-color: royalblue;
+  padding-left: 30px;          /* slide-in effect on hover */
+  color: #fff;
+}
+
+/* Active/selected item */
+#left-side h3:first-child {
+  background-color: royalblue; /* Home is active by default */
+  border-left: 4px solid orange;
+}
+
+/* Right side image */
+#right-image {
+  flex: 1;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#right-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;           /* fills the space like a realistic photo */
+  display: block;
+}
+/* Main container */
+#programme {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 60px;
+  background-color: #f4f6fb;
+  font-family: Arial, sans-serif;
+}
+
+/* Notice box */
+#programme .notice-box {
+  background-color: #fff8e1;
+  border-left: 5px solid orange;
+  border-radius: 8px;
+  padding: 16px 24px;
+  width: 100%;
+  max-width: 750px;
+  margin-bottom: 30px;
+}
+
+/* Notice link */
+#programme .notice-box a {
+  font-size: 18px;
+  font-weight: bold;
+  color: royalblue;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+#programme .notice-box a:hover {
+  text-decoration: underline;
+  color: orange;
+}
+
+/* Notice paragraph */
+#programme .notice-box p {
+  font-size: 15px;
+  color: #555;
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* Our Programme heading */
+#programme h1 {
+  font-size: 2.5rem;
+  color: royalblue;
+  text-align: center;
+  margin: 30px 0 20px;
+  border-bottom: 3px solid orange;
+  padding-bottom: 10px;
+}
+
+/* Programme cards container */
+#programme .programmes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 900px;
+}
+
+/* Each programme card */
+#programme .programmes h3 {
+  background-color: royalblue;
+  color: white;
+  font-size: 17px;
+  padding: 18px 28px;
+  border-radius: 10px;
+  margin: 0;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  min-width: 200px;
+  border-bottom: 4px solid orange;
+}
+
+/* Hover effect on cards */
+#programme .programmes h3:hover {
+  background-color: #0d2f8a;
+  transform: translateY(-4px);
+}
+
+/* Images */
+#programme img {
+  width: 100%;
+  max-width: 750px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 15px 0;
+}
+/* ── Wrapper default state ── */
+.contact-social-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  background-color: orange;
+  padding: 40px 60px;
+  gap: 40px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  transition: all 0.4s ease;        /* smooth animation */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+/* ── Scrolled/Shrunk state (added via JavaScript) ── */
+.contact-social-wrapper.scrolled {
+  padding: 15px 30px;              /* shrinks padding */
+  gap: 20px;
+  background-color: darkorange;    /* slightly darker on scroll */
+  flex-wrap: nowrap;               /* items stay in one line */
+  overflow: hidden;
+}
+
+/* ── Contact Info ── */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: all 0.4s ease;
+}
+
+.contact-info h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin: 0 0 10px 0;
+  border-bottom: 2px solid white;
+  padding-bottom: 6px;
+}
+
+.contact-info p {
+  font-size: 15px;
+  color: white;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Shrink text on scroll */
+.scrolled .contact-info h3 {
+  font-size: 15px;
+  margin: 0;
+}
+
+.scrolled .contact-info p {
+  font-size: 12px;
+}
+
+/* ── Social Links ── */
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: all 0.4s ease;
+}
+
+.social-links h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin: 0 0 10px 0;
+  border-bottom: 2px solid white;
+  padding-bottom: 6px;
+}
+
+/* Social buttons row on scroll */
+.scrolled .social-links {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.scrolled .social-links h3 {
+  font-size: 15px;
+  margin: 0;
+}
+
+/* ── Social Icon Buttons ── */
+.social-icon {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.social-icon:hover {
+  transform: scale(1.08);
+  opacity: 0.85;
+}
+
+/* Individual colors */
+.facebook  { background-color: #1877f2; }
+.twitter   { background-color: #1da1f2; }
+.instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+.linkedin  { background-color: #0077b5; }
+
+/* Shrink icons on scroll */
+.scrolled .social-icon {
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: 15px;
+}
