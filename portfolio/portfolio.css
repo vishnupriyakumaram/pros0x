@@ -1,0 +1,32 @@
+div.intro{
+color:#236789;
+font-size:20px;
+text-align:left;
+max-width: 50px;
+max-height:25px;
+border: 100px solid rgba(238, 189, 189, 0.911);
+border-radius:2px;
+border-top-style:outset;
+border-bottom-style:ridge;
+border-left-style:groove;
+border-right-style:groove;
+}
+ 
+div.intro a{
+    font-size: large;
+    font-weight: bold;
+    color: rgb(186, 206, 98);
+}
+
+div.video-player{
+border: 5px solid rgb(195, 89, 107);
+border-radius:2px;
+background-color: aquamarine;
+}
+
+div.projects{
+    text-decoration
+
+
+
+}
